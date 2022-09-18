@@ -1,0 +1,78 @@
+<html>
+<title>Demos daw 2</title>
+<head> </head>
+<script>
+
+//funcio, dos parametres i aparageui al costat de daw 2
+//A la consola posariem MostrarUsuari("s","q")
+function MostrarUsuari(user, pass){
+    document.getElementById("title").innerHTML = "login";
+    document.getElementById("title").innerText = "login";
+
+}
+
+//Fer una funció que pugui ocultar el títol
+
+function ocultarMsg(){
+    document.getElementById("msg").style.visibility = 'hidden';
+
+}
+//ocultarMsg()
+
+//Comentaris, tipus de variables, mateixa variable es pot posar diferents tipos
+var x = "hola";
+console.log(x);
+x = "adéu";
+console.log(x);
+
+//Let i var, què fa?
+
+let m= "Júlia";
+console.log(m);
+
+//fer validació
+
+
+
+alert("Hola" + m);
+
+function validation(){
+
+    let user = document.getElementById("login").value;
+    let pass = document.getElementById("Contrasenya").value;
+    if(user.length  === 0){
+        alert("Falta posar l'usuari!" + "  " + m);
+        document.getElementById("login").style.borderColor = "red";
+
+    }
+    if(pass.length  === 0){
+        alert("Falta posar la contrasenya!" + "  " + m);
+        document.getElementById("Contrasenya").style.borderColor = "red";
+
+    }
+
+}
+
+</script>
+
+<style lang = "css">
+    body{
+        margin: 3%;
+    }
+
+    </style>
+
+<body>
+    <h1 id="msg">HOLA CLASSE </h1>
+    <DIV>
+        <h2 id="title">daw 2 </h2><br/>
+        //document.getElementById("login").value
+        <input type = "text"  name="login" id ="login" placeholder="escriu algo" required/>
+        <input type = "Contrasenya" name="Contrasenya" id ="Contrasenya" placeholder="Contrasenya" required/>
+        <input type = "button" text = "Enviar" onclick="validation()" value = "enviar">
+    </DIV>
+
+    
+</body>
+</html>   
+
