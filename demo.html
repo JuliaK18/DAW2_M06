@@ -3,6 +3,7 @@
 <head> </head>
 <script>
 
+//funcio, dos parametres i aparageui al costat de daw 2
 //A la consola posariem MostrarUsuari("s","q")
 function MostrarUsuari(user, pass){
     document.getElementById("title").innerHTML = "login";
@@ -16,16 +17,20 @@ function ocultarMsg(){
     document.getElementById("msg").style.visibility = 'hidden';
 
 }
+//ocultarMsg()
 
+//Comentaris, tipus de variables, mateixa variable es pot posar diferents tipos
 var x = "hola";
 console.log(x);
 x = "adéu";
 console.log(x);
 
+//Let i var, què fa?
 
 let m= "Júlia";
 console.log(m);
 
+//fer validació
 
 
 
@@ -38,12 +43,20 @@ function validation(){
     if(user.length  === 0){
         alert("Falta posar l'usuari!" + "  " + m);
         document.getElementById("login").style.borderColor = "red";
+        document.getElementById("msg").innerHTML = "Introdueix l'usuari";
+        document.getElementById("msg").style.color = "red";
 
     }
     if(pass.length  === 0){
         alert("Falta posar la contrasenya!" + "  " + m);
         document.getElementById("Contrasenya").style.borderColor = "red";
+        document.getElementById("msg").innerHTML = "Introdueix la  contrasenya";
+        document.getElementById("msg").style.color = "red";
 
+    }
+    if(user.length  === 0 & pass.length  === 0) {
+        document.getElementById("msg").innerHTML = "Introdueix l'usuari i la constrassenya!";
+        document.getElementById("msg").style.color = "red";
     }
 
 }
@@ -58,10 +71,11 @@ function validation(){
     </style>
 
 <body>
-    <h1 id="msg">HOLA CLASSE </h1>
+    <h1 id="msg"> Inici Sessió! </h1>
+    <h3 id="missatge"> </h3>
+
     <DIV>
-        <h2 id="title">daw 2 </h2><br/>
-        //document.getElementById("login").value
+        <h2 id="title">Alumnat DAW 2 </h2><br/>
         <input type = "text"  name="login" id ="login" placeholder="escriu algo" required/>
         <input type = "Contrasenya" name="Contrasenya" id ="Contrasenya" placeholder="Contrasenya" required/>
         <input type = "button" text = "Enviar" onclick="validation()" value = "enviar">
